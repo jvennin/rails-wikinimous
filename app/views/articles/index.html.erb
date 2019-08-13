@@ -1,0 +1,16 @@
+<h1>My articles</h1>
+
+<% @articles.each do |article| %>
+<h2><%= link_to article.title, article_path(article) %></h2>
+<p><%= article.content.first(100) %>...</p>
+  <%= link_to article_path(article),
+  method: :delete,
+  data: { confirm: "are you sure?"} do %>
+    <i class="far fa-trash-alt"></i>
+  <% end %>
+<% end %>
+</ul>
+<hr>
+<%= link_to new_article_path do%>
+  <i class="fas fa-plus"></i> Add a new article
+<% end %>

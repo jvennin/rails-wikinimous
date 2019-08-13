@@ -4,12 +4,28 @@
     <title>RailsWikinimous</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
   </head>
 
   <body>
-    <%= yield %>
+        <!-- Just an image -->
+    <nav class="navbar navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="#">Wikinimous
+        <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+      </a>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div class="container-fluid">
+      <footer class="footer sticky-bottom">
+        <div class="container">
+          <span class="text-muted">Made with ♥️ at le Wagon</span>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
